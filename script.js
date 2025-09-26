@@ -24,7 +24,15 @@ addProductButton.addEventListener("click", function () {
   const inputText = productNameInput.value;
   const inputPrice = Number(productPriceInput.value);
 
-  if (!inputText || isNaN(inputPrice)) return;
+  if (!inputText || isNaN(inputPrice)) {
+    alert("Please enter a product name.");
+    return;
+  }
+
+    if (!productPriceInput.value || isNaN(inputPrice) || inputPrice <= 0) {
+    alert("Please enter a valid product price greater than 0.");
+    return;
+  }
 
   let li = document.createElement("li");
   li.textContent = `${inputText} - $${inputPrice.toFixed(2)}`;
