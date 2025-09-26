@@ -2,6 +2,13 @@ body {
   font-family: Arial, sans-serif;
   margin: 20px;
   line-height: 1.6;
+  background: #fdf6f9;
+  margin: 0;
+  padding: 2rem;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
  
 #product-container {
@@ -9,12 +16,72 @@ body {
   gap: 10px;
   margin-bottom: 20px;
 }
- 
+
+#product-container input {
+  padding: 0.5rem 0.75rem;
+  border: 2px solid #ffd6e7;
+  border-radius: 10px;
+  font-size: 1rem;
+  outline: none;
+  transition: border 0.3s;
+}
+
+#product-container input:focus {
+  border-color: #ff6fa5;
+}
+
+#add-product {
+  background: #ff6fa5;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s, transform 0.1s;
+}
+
+#add-product:hover {
+  background: #ff4d88;
+}
+
+#add-product:active {
+  transform: scale(0.95);
+}
+
 #cart {
   list-style: none;
   padding: 0;
+  width: 100%;
+  max-width: 400px;
+}
+
+#cart li {
+  background: #fff;
+  margin-bottom: 0.5rem;
+  padding: 0.75rem 1rem;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+  font-size: 1rem;
+}
+
+#cart li .remove {
+  background: #ffd6e7;
+  border: none;
+  border-radius: 8px;
+  padding: 0.3rem 0.7rem;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: 0.3s;
 }
  
+#cart li .remove:hover {
+  background: #ff6fa5;
+  color: white;
+  
 .cart-item {
   display: flex;
   justify-content: space-between;
@@ -28,4 +95,24 @@ body {
  
 .cart-item button {
   margin-left: 10px;
+}
+
+
+/* Total price */
+h3 {
+  margin-top: 1.5rem;
+  color: #444;
+  font-size: 1.25rem;
+}
+
+#total-price {
+  font-weight: bold;
+  color: #ff4d88;
+}
+
+h1 {
+  color: #ff6fa5;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  text-shadow: 1px 1px #ffd6e7;
 }
